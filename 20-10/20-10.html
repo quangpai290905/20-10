@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Chúc mừng ngày Phụ nữ Việt Nam</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Ms+Madi&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;600&display=swap');
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-image: url(bgr3.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .container {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+        }
+        .toast {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            background: rgba(250, 107, 205, 0.3);
+        }
+        .toast .toast-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin-top: 10%;
+            gap: 10px;
+        }
+        .toast .text1 {
+            transition: 2s;
+        }
+        .toast .text1 h1 {
+            font-family: 'Pacifico', cursive;
+            font-size: 2.8em;
+            visibility: hidden;
+            animation: h1 2s forwards;
+            animation-delay: 1s;
+        }
+        @keyframes h1 {
+            0% {
+                opacity: 0;
+                transform: translateY(-200px);
+            }
+            100% {
+                opacity: 1;
+                visibility: visible;
+                transform: translateY(0);
+            }
+        }
+        .toast .text2 {
+            transition: 2s;
+        }
+        .toast .text2 h2 {
+            font-family: 'Pacifico', cursive;
+            font-size: 1.2em;
+            visibility: hidden;
+            animation: h2 2s forwards;
+            animation-delay: 2s;
+        }
+        @keyframes h2 {
+            0% {
+                opacity: 0;
+                transform: translateY(-250px);
+            }
+            100% {
+                visibility: visible;
+                opacity: 1;
+                transform: translateY(0px);
+            }
+        }
+        .btn {
+            margin-top: 20px;
+        }
+        .btn .button--yes {
+            z-index: 2;
+            left: 400px;
+            position: absolute;
+            padding: 10px 20px;
+            background: rgb(250, 68, 68);
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            color: white;
+            animation: yes 2s linear;
+        }
+        .btn .button--yes:hover {
+            background-color: rgb(255, 1, 162);
+            box-shadow: 2px 2px 5px rgb(255, 1, 162, 0.5);
+        }
+        .btn .button--no {
+            left: 700px;
+            position: absolute;
+            padding: 10px 15px;
+            background: rgb(38, 56, 255);
+            border: none;
+            border-radius: 5px;
+            color: white;
+            animation: no 2s linear;
+        }
+        .btn .button--no:hover {
+            background-color: rgb(30, 120, 255);
+            cursor: pointer;
+        }
+        .box-mail {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+        }
+        .mail {
+            z-index: 1;
+            position: absolute;
+            width: 65%;
+            height: auto;
+            flex-direction: column;
+            background-color: rgb(248, 166, 166);
+            padding: 10px 20px;
+            display: flex;
+            gap: 1px;
+            border-radius: 10px;
+            transform: translateY(-250px);
+            transition: transform 2s;
+            box-shadow: -5px -5px 10px rgba(255, 255, 255, 0.8),
+                5px 5px 10px rgba(0, 0, 0, 0.5);
+        }
+        .mail.active {
+            transform: translateY(130px);
+        }
+        .mail h1 {
+            font-family: 'Ms Madi', cursive;
+            font-size: 2.3em;
+        }
+        .mail h1 i {
+            color: red;
+            padding: 0px 20px;
+        }
+        .mail p {
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.3em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="toast">
+            <div class="toast-container">
+                <div class="text1">
+                    <h1>Nhân dịp ngày 20/10 <3</h1>
+                </div>
+                <div class="text2">
+                    <h2>❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤</h2>
+                </div>
+                <div class="btn">
+                    <button class="button--yes" id="yes">Nhận thư<33</button>
+                    <button class="button--no" id="no">không thèm</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="box-mail">
+        <div class="mail">
+            <h1 style="text-align: center;">
+                <i class="fa-solid fa-heart"></i>
+                Gửi các bạn nữ/ chị xinh đẹp!!!
+                <i class="fa-solid fa-heart"></i>
+            </h1>
+            <p>Ú chúc chị em ngày càng xinh đẹp may mắn trong cuộc sống, hôn nhân, sự nghiệp và gia đình nha!</p>
+            <p>❤❤Kí tên❤❤</p>
+            <p>Ú Na Ú Nần</p>
+        </div>
+    </div>
+    <!-- Link to the external JavaScript file -->
+    <script src="app.js"></script>
+</body>
+</html>
